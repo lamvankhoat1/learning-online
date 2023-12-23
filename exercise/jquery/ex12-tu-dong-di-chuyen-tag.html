@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tự động di chuyển tag</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Cho một cấu trúc HTML như bên dưới, áp dụng setInterval() lần lượt cho phần tử li cuối cùng sẽ di chuyển ra đầu danh sách sau mỗi 3 giây. -->
+    <script>
+        $(document).ready(function () {
+            function moveItemAuto() {
+                //   lấy ra phần tử cuối
+                let lastChild = $(".list li").last();
+                //   xóa phần tử cuối
+                $(".list li").last().remove();
+                //   thêm phần tử cuối vào đầu
+                $(".list").prepend(lastChild)
+            }
+
+            //   thiết lập setInterval()
+            setInterval(moveItemAuto, 1000)
+
+        })
+    </script>
+    <ul class="list">
+        <li>item 01</li>
+        <li>item 02</li>
+        <li>item 03</li>
+        <li>item 04</li>
+        <li>item 05</li>
+        <li>item 06</li>
+        <li>item 07</li>
+    </ul>
+</body>
+
+</html>

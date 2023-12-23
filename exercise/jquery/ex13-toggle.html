@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ẩn hiện tag</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Cho một cấu trúc HTML như bên dưới, khi click button thì thành phần div sẽ luân phiên ẩn hiện. -->
+    <style>
+        .box {
+            border: 3px solid #eee;
+            display: none;
+            height: 100px;
+            margin-top: 5px;
+            padding: 10px;
+            width: 150px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+          $("#toggle").click(function(){
+            $(".box").slideToggle();
+          })
+        })
+    </script>
+    <button type="button" id="toggle">Open</button>
+    <div class="box">In suscipit nec velit sit amet convallis. Integer</div>
+</body>
+</html>
+
+<!-- Có rất nhiều cách có thể làm được bài tập này, các bạn sử dụng thử: .toggle(), .slideToggle() hoặc .toggleClass(). -->
