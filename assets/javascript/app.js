@@ -3,7 +3,7 @@ let list_unit_jquery = [
     { url: "https://www.w3schools.com/jquery/", name: "jQuery Tutorial - W3SCHOOL" },
     { url: "https://www.w3schools.com/quiztest/quiztest.asp?qtest=JQUERY", name: "Bài tập trắc nghiệm - Jquery" },
     { url: "https://www.w3schools.com/jquery/exercise_jq.asp", name: "Bài tập điền code - Jquery" },
-    { url: "https://hocwebchuan.com/tutorial/jquery/", name: "Bài tập Jquery - hocwebchuan" },
+    { url: "https://hocwebchuan.com/exercises/jquery/", name: "Bài tập Jquery - hocwebchuan" },
     { url: "https://freetuts.net/hoc-jquery/bai-tap-jquery", name: "Bài tập Jquery - freetuts" },
     { url: "https://blogit.vn/series/bai-tap-jquery", name: "Bài tập Jquery - blogit" },
 ]

@@ -4,10 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>So sánh 2 số, xuất ra số lớn hơn.</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
 </head>
 <body>
     <div id="result"></div>
     <!-- So sánh 2 số, xuất ra số lớn hơn. -->
-    
+    <script>
+        $(document).ready(function(){
+          let $a = 2;
+          let $b = 10;
+          if($a > $b) {
+            $("#result").html("a lớn hơn b");
+          } else if($b > $a) {
+            $("#result").html("b lớn hơn a");
+          } else {
+            $("#result").html("a bằng b");
+          }
+        })
+    </script>
 </body>
 </html>
