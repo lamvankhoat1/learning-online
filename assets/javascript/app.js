@@ -29,20 +29,22 @@ let list_unit_responsive = [
     { url: "https://hocwebchuan.com/tutorial/responsive/responsive_type.php", name: 'DEMO NAVBAR 3' },
 ]
 
-function renderHTMT_function(h2_title, data_array) {
+function renderHTMT_function(h4_title, data_array) {
     let renderHTML_listUnit = ""
-    renderHTML_listUnit += `<h2>${h2_title}</h2>`
+    renderHTML_listUnit += `<h4>${h4_title}</h4>`
     for (let unit of data_array) {
-        console.log(unit.url.toString().includes("webrun:"))
+        let icon_angleDoubleRight = `<i class="fa fa-angle-double-right" aria-hidden="true"></i>`
+
         if (unit.url.toString().includes("webrun:")) {
-            renderHTML_listUnit += `- <span onclick="openTab('${unit.url}', true)">${unit.name}</span><br>`;
+            renderHTML_listUnit += `<div>${icon_angleDoubleRight} <span onclick="openTab('${unit.url}', true)">${unit.name}</span></div>`;
         } else {
-            renderHTML_listUnit += `- <span onclick="openTab('${unit.url}')">${unit.name}</span> | `;
-            renderHTML_listUnit += `<span onclick="openTab('${unit.url}', true)">Full Width</span><br>`;
+            renderHTML_listUnit += `<div>${icon_angleDoubleRight} <span onclick="openTab('${unit.url}')">${unit.name}</span> | `;
+            renderHTML_listUnit += `<span onclick="openTab('${unit.url}', true)">Full Width</span></div>`;
         }
+
     }
-    renderHTML_listUnit = `<div>${renderHTML_listUnit}</div>`
-    $("#list-unit").html($("#list-unit").html() + renderHTML_listUnit);
+    renderHTML_listUnit = `<div class="col-2 item">${renderHTML_listUnit}</div>`
+    $("#list-unit .container .row").html($("#list-unit  .container .row").html() + renderHTML_listUnit);
 
 }
 $(document).ready(function () {

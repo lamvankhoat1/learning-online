@@ -18,3 +18,8 @@ body {
     cursor: pointer;
     text-decoration: underline;
 }
+
+/* bootstrap */
+.item.col-4 {
+    margin-top: 10px;
+}
