@@ -26,6 +26,7 @@ let list_unit_app = [
 let list_unit_responsive = [
     { url: "https://www.technewstoday.com/fix-the-cloud-file-provider-is-not-running/", name: 'DEMO NAVBAR 1' },
     { url: "https://ttn.edu.vn", name: 'DEMO NAVBAR 2' },
+    { url: "https://hocwebchuan.com/tutorial/responsive/responsive_type.php", name: 'DEMO NAVBAR 3' },
 ]
 
 function renderHTMT_function(h2_title, data_array) {
