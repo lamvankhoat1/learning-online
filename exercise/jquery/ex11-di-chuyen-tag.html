@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Di chuyển tag</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+          $("button#change").click(function(){
+            let lastChild = $(".list li").last().clone();
+            // hoặc $(".list li").last()
+            $(".list li").last().remove();
+            $(".list").prepend(lastChild);
+          })
+        })
+    </script>
+    <ul class="list">
+        <li>item 01</li>
+        <li>item 02</li>
+        <li>item 03</li>
+        <li>item 04</li>
+        <li>item 05</li>
+        <li>item 06</li>
+        <li>item 07</li>
+      </ul>
+      <button type="button" id="change">Change</button>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add tag</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Sử dụng kết quả của Bài tập thêm tag, viết thêm một button mà khi click sẽ xóa nội dung của item vừa tạo gần nhất. -->
+    <script>
+        // start
+        $(document).ready(function(){
+          $("#add").click(function(){
+            $("#list").append("<li>Item 8</li>")
+          })
+
+          $("#remove").click(function(){
+            $("#list li:last-child").remove();
+            // cách 2: $('#list li').last().remove();
+          })
+        })
+        // end
+    </script>
+    <ul id="list">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+        <li>item 6</li>
+        <li>item 7</li>
+    </ul>
+    <button type="button" id="remove">Remove</button> <button type="button" id="add">Add</button>
+</body>
+
+</html>

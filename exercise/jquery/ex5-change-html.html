@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Cho một cấu trúc HTML như bên dưới, khi click button sẽ thay đổi nội dung text của div. -->
+    <script>
+      // start
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("div").html("Học <b>Jquery</b>");
+          })
+        })
+      // end
+    </script>
+    <div>In suscipit nec velit sit amet convallis. Integer</div>
+    <button type="button">Click</button>
+</body>
+
+</html>

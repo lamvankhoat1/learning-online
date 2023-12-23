@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập 2 số từ input, xuất ra số lớn hơn.</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Cho một cấu trúc HTML như bên dưới, nhập 2 số từ input, xuất ra số lớn hơn. -->
+    <h1>Nhập 2 số từ input, xuất ra số lớn hơn.</h1>
+    <input type="text" id="nameA" value="0"> <input type="text" id="nameB" value="0">
+    <div>Max: <span id="result"></span></div>
+
+    <script>
+        $(document).ready(function(){
+             /* Code viết ở đây ↓ */
+             $("input").change(function(){
+                 let $a = $("#nameA").val();
+                 let $b = $("#nameB").val();
+                 compare($a, $b);
+             })
+             
+            function compare(a, b) {
+                a=+a, b=+b;
+                let $result = $("#result");
+                if(a > b) {
+                    $result.text(a);
+                } else if(a < b) {
+                    $result.text(b);
+                }
+            }
+        //   end
+        })
+    </script>
+</body>
+
+</html>

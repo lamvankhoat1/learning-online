@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add tag</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Cho một cấu trúc HTML như bên dưới, khi click button sẽ thêm một item bên trong danh sách đã cho. -->
+    <script>
+        // start
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("#list").append("<li>Item 8</li>")
+          })
+        })
+        // end
+    </script>
+    <ul id="list">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+        <li>item 6</li>
+        <li>item 7</li>
+    </ul>
+    <button type="button">Add</button>
+</body>
+
+</html>

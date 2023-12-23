@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm cấu trúc HTML</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Sử dụng kết quả của Bài tập thêm cấu trúc HTML, viết thêm một button mà khi click sẽ xóa nội dung của div vừa tạo gần nhất.
+        Hãy xử lý sao cho không được xóa cấu trúc HTML ban đầu. -->
+    <script>
+        $(document).ready(function () {
+            $("button").click(function(){
+              $(".box:gt(0)").last().remove();
+            })
+        })
+    </script>
+    <div class="box">
+        <h3>Box title</h3>
+        <ul class="list">
+            <li>item 01</li>
+            <li>item 02</li>
+            <li>item 03</li>
+            <li>item 04</li>
+            <li>item 05</li>
+            <li>item 06</li>
+            <li>item 07</li>
+        </ul>
+    </div>
+    <div class="box">
+        <h3>Box title</h3>
+        <ul class="list">
+            <li>item 01</li>
+            <li>item 02</li>
+            <li>item 03</li>
+            <li>item 04</li>
+            <li>item 05</li>
+            <li>item 06</li>
+            <li>item 07</li>
+        </ul>
+    </div>
+    <div class="box">
+        <h3>Box title</h3>
+        <ul class="list">
+            <li>item 01</li>
+            <li>item 02</li>
+            <li>item 03</li>
+            <li>item 04</li>
+            <li>item 05</li>
+            <li>item 06</li>
+            <li>item 07</li>
+        </ul>
+    </div>
+    <div class="box">
+        <h3>Box title</h3>
+        <ul class="list">
+            <li>item 01</li>
+            <li>item 02</li>
+            <li>item 03</li>
+            <li>item 04</li>
+            <li>item 05</li>
+            <li>item 06</li>
+            <li>item 07</li>
+        </ul>
+    </div>
+    <div class="box">
+        <h3>Box title</h3>
+        <ul class="list">
+            <li>item 01</li>
+            <li>item 02</li>
+            <li>item 03</li>
+            <li>item 04</li>
+            <li>item 05</li>
+            <li>item 06</li>
+            <li>item 07</li>
+        </ul>
+    </div>
+    <button type="button">Remove</button>
+</body>
+
+</html>

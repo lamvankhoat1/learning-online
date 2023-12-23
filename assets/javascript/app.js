@@ -1,5 +1,9 @@
-let list_unit_jquery = [
+let list_unit_fullstack = [
+    {url: "https://hocwebchuan.com/", name: "Học Web Chuẩn"},
     { url: "https://unitop.vn/my-course", name: "Khóa học UNITOP" },
+]
+
+let list_unit_jquery = [
     { url: "https://www.w3schools.com/jquery/", name: "jQuery Tutorial - W3SCHOOL" },
     { url: "https://www.w3schools.com/quiztest/quiztest.asp?qtest=JQUERY", name: "Bài tập trắc nghiệm - Jquery" },
     { url: "https://www.w3schools.com/jquery/exercise_jq.asp", name: "Bài tập điền code - Jquery" },
@@ -41,6 +45,7 @@ function renderHTMT_function(h2_title, data_array) {
 
 }
 $(document).ready(function () {
+    renderHTMT_function('TÀI LIỆU FULL STACK', list_unit_fullstack);
     renderHTMT_function('TÀI LIỆU JQUERY', list_unit_jquery);
     renderHTMT_function('TÀI LIỆU MARKDOWN', list_unit_markdown);
     renderHTMT_function('APP HỌC TẬP', list_unit_app);
