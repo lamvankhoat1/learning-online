@@ -15,7 +15,8 @@ let list_unit_markdown = [
 ]
 
 let list_unit_app = [
-    { url: 'webrun:C:/Users/lamva/AppData/Local/Programs/Anki/anki.exe', name: 'ANKI' }
+    { url: 'webrun:C:/Users/lamva/AppData/Local/Programs/Anki/anki.exe', name: 'ANKI' },
+    { url: 'https://snippet-generator.app/', name: 'snippet-generator' },
 ]
 
 let list_unit_responsive = [
