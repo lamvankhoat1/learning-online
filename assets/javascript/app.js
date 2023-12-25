@@ -1,6 +1,6 @@
 let list_unit_fullstack = [
-    {url: "https://hocwebchuan.com/", name: "Học Web Chuẩn", img: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://hocwebchuan.com&size=64"},
-    { url: "https://unitop.vn/my-course", name: "Khóa học UNITOP", img: "https://unitop.vn/public/images/favicon.ico"},
+    { url: "https://hocwebchuan.com/", name: "Học Web Chuẩn", img: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://hocwebchuan.com&size=64" },
+    { url: "https://unitop.vn/my-course", name: "Khóa học UNITOP", img: "https://unitop.vn/public/images/favicon.ico" },
 ]
 
 let list_unit_jquery = [
@@ -20,7 +20,7 @@ let list_unit_markdown = [
 
 let list_unit_app = [
     { url: 'webrun:C:/Users/lamva/AppData/Local/Programs/Anki/anki.exe', name: 'ANKI' },
-    { url: 'https://www.duolingo.com/', name: 'Duolingo', img: "https://d35aaqx5ub95lt.cloudfront.net/favicon.ico"},
+    { url: 'https://www.duolingo.com/', name: 'Duolingo', img: "https://d35aaqx5ub95lt.cloudfront.net/favicon.ico" },
     { url: 'https://snippet-generator.app/', name: 'snippet-generator' },
 ]
 
@@ -28,6 +28,10 @@ let list_unit_responsive = [
     { url: "https://www.technewstoday.com/fix-the-cloud-file-provider-is-not-running/", name: 'DEMO NAVBAR 1' },
     { url: "https://ttn.edu.vn", name: 'DEMO NAVBAR 2' },
     { url: "https://hocwebchuan.com/tutorial/responsive/responsive_type.php", name: 'DEMO NAVBAR 3' },
+]
+
+let list_unit_tool = [
+    { url: "https://ticktick.com/", name: 'ticktick', img: "https://www.google.com/s2/favicons?sz=64&domain=ticktick.com" },
 ]
 
 function renderHTMT_function(h4_title, data_array) {
@@ -56,26 +60,28 @@ function renderHTMT_function(h4_title, data_array) {
 $(document).ready(function () {
     renderHTMT_function('TÀI LIỆU FULL STACK', list_unit_fullstack);
     renderHTMT_function('TÀI LIỆU JQUERY', list_unit_jquery);
+    renderHTMT_function('BÀI TẬP WEBRESPONSIVE', list_unit_responsive);
     renderHTMT_function('TÀI LIỆU MARKDOWN', list_unit_markdown);
     renderHTMT_function('APP HỌC TẬP', list_unit_app);
-    renderHTMT_function('BÀI TẬP WEBRESPONSIVE', list_unit_responsive);
+    renderHTMT_function('CÔNG CỤ', list_unit_tool);
 })
 
-let tab;
+let tabs = [];
 function openTab(url, isFullWidth) {
-    if (tab) {
-        tab.close();
-    }
     let width = window.outerWidth;
     let offsetWidth = 300
     let height = window.outerHeight;
     if (isFullWidth) {
-        tab = window.open(url, "_blank");
+        tabs[tabs.length] = window.open(url, "_blank");
     } else {
-        tab = window.open(url, "_blank", `width=${width - offsetWidth}, height=${height}, left=${offsetWidth}, top=${height - 20}`);
+        tabs[tabs.length] = window.open(url, "_blank", `width=${width - offsetWidth}, height=${height}, left=${offsetWidth}, top=${height - 20}`);
     }
 }
 
 window.addEventListener('beforeunload', function () {
-    tab.close()
+    for (let tab of tabs) {
+        for (let tab of tabs) {
+            tab.close();
+        }
+    }
 })
