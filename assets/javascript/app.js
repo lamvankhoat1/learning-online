@@ -1,5 +1,5 @@
 let list_unit_fullstack = [
-    {url: "https://hocwebchuan.com/", name: "Học Web Chuẩn"},
+    {url: "https://hocwebchuan.com/", name: "Học Web Chuẩn", img: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://hocwebchuan.com&size=64"},
     { url: "https://unitop.vn/my-course", name: "Khóa học UNITOP", img: "https://unitop.vn/public/images/favicon.ico"},
 ]
 
