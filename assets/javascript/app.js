@@ -19,9 +19,9 @@ let list_unit_markdown = [
 ]
 
 let list_unit_app = [
-    { url: 'webrun:C:/Users/lamva/AppData/Local/Programs/Anki/anki.exe', name: 'ANKI' },
+    { url: 'webrun:C:/Users/lamva/AppData/Local/Programs/Anki/anki.exe', name: 'ANKI', img: "https://apps.ankiweb.net/favicon.ico"},
     { url: 'https://www.duolingo.com/', name: 'Duolingo', img: "https://d35aaqx5ub95lt.cloudfront.net/favicon.ico" },
-    { url: 'https://snippet-generator.app/', name: 'snippet-generator' },
+    { url: 'https://snippet-generator.app/', name: 'snippet-generator', img: "https://snippet-generator.app/favicon-32x32.png"},
 ]
 
 let list_unit_responsive = [
@@ -42,7 +42,7 @@ function renderHTMT_function(h4_title, data_array) {
 
         if (unit.url.toString().includes("webrun:")) {
             renderHTML_listUnit += ` <li class="list-group-item">
-            <span onclick="openTab('${unit.url}', true)">${unit.name}</span>
+            <span onclick="openTab('${unit.url}', true)">${img} ${unit.name}</span>
             </li>`;
         } else {
             renderHTML_listUnit += ` <li class="list-group-item d-flex justify-content-between align-items-center">
