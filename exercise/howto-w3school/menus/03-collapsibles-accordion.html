@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+</head>
+
+<body>
+    <p>Accordion</p>
+
+    <style>
+        button.accordion {
+            background-color: #ccc;
+            display: block;
+            width: 100%;
+            font-size: 15px;
+            padding: 13px 0;
+            outline: none;
+            border: none;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        button.accordion::after {
+            content: "\02795";
+            font-size: 10px;
+            float: right;
+            margin-right: 10px;
+            color: #ddd;
+        }
+
+        button.accordion:hover, button.accordion.active {
+            background-color: #aeaeae;
+        }
+
+        button.accordion.active::after {
+            content: "\2796";
+        }
+
+        .accordion+.panel {
+            text-align: justify;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .accordion+.panel p {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, tempora laudantium animi tempore soluta
+            voluptatum repudiandae dolorum doloribus labore dolorem est neque at quaerat! Temporibus vitae est dolores
+            placeat impedit hic suscipit totam fugiat, quibusdam quis! Quam nihil, inventore labore possimus molestias
+            explicabo ipsa. Est quidem dignissimos impedit perferendis officia aliquam nesciunt saepe doloribus dolore
+            accusantium, pariatur perspiciatis, recusandae quam ducimus commodi sint, suscipit voluptatibus optio vel
+            porro veritatis exercitationem laudantium eveniet laborum. Iusto possimus culpa neque corrupti placeat, sunt
+            nemo eius alias quia magnam aliquam delectus cumque! Sint cumque voluptas vero officiis a dolor ratione
+            corporis iure consequuntur maxime voluptates quasi pariatur aut corrupti ducimus reiciendis quo porro, in
+            commodi distinctio repudiandae! Repellat, modi. Aspernatur odio consectetur autem at rerum porro ducimus
+            nisi perspiciatis, consequatur aperiam laudantium quaerat, aliquid laborum a accusantium veritatis quasi
+            ipsum. Ipsa, reprehenderit laudantium temporibus quo illum autem error mollitia laborum repellat quasi,
+            voluptatem porro placeat corporis, culpa commodi? Officiis facere provident laboriosam facilis nulla
+            adipisci excepturi inventore quisquam quia, maxime labore accusantium, libero tempore ipsa deleniti veniam
+            quibusdam nam? Modi dolorem tempore natus. Quasi animi quo maxime eligendi sunt eius similique facere
+            exercitationem officiis. Veritatis deserunt odit, autem quidem, explicabo magnam saepe ad tempore
+            repudiandae aperiam nostrum veniam maiores laudantium voluptates corporis dolores sunt magni ipsam cum
+            corrupti, perferendis repellat? Delectus enim, nostrum quibusdam fugit tempore neque iusto voluptates sed
+            amet maxime assumenda deleniti. Rem libero laboriosam quam distinctio! Veniam autem, vel magni veritatis
+            quia molestiae enim voluptates eveniet omnis ratione ducimus perferendis maiores non blanditiis labore
+            doloribus eos illo dolore iusto deleniti quis expedita doloremque voluptatum rerum. Alias quia eum eligendi
+            tempora, saepe non quod, corrupti corporis quo quibusdam temporibus ut neque explicabo quam. Fugit accusamus
+            molestias incidunt provident praesentium, similique, odio sint eos possimus doloribus laudantium non nam.
+            Perferendis odit officia voluptas eaque ipsum, adipisci repudiandae! Alias accusantium veniam, repudiandae,
+            minus repellendus delectus labore sit obcaecati quasi animi eaque consequatur laboriosam totam nobis, magni
+            aliquam corporis inventore harum cum pariatur. Tenetur exercitationem, voluptatem atque dolore aut magni
+            quod ipsam animi autem unde illo, culpa debitis esse dolorum doloribus, temporibus nostrum. Est odio
+            possimus perspiciatis explicabo, laboriosam mollitia obcaecati libero. Ipsa magnam perferendis sapiente at
+            velit odit nemo perspiciatis repellat quam, asperiores dolores quas distinctio dolorum minus eos? Voluptas
+            dolorem accusamus at ex qui quod magni temporibus, quaerat quo saepe numquam velit distinctio, sunt corporis
+            similique excepturi necessitatibus est error placeat laborum obcaecati eveniet. Accusamus voluptatibus cum
+            placeat, quisquam corrupti exercitationem, eligendi deleniti qui nesciunt voluptas officia ut, esse error
+            incidunt ipsum magnam eum inventore distinctio ad officiis? Accusamus odio cum tempora placeat ab
+            accusantium error fugit sapiente earum commodi nihil numquam, aliquid similique odit, laudantium voluptates
+            saepe, quaerat corrupti iste exercitationem vitae dolores provident. Corrupti, repellat nisi. Suscipit
+            placeat esse, pariatur dolores aut quisquam reprehenderit nam doloremque. Delectus dicta ex quisquam totam
+            necessitatibus minus adipisci, placeat esse nihil quasi dignissimos nesciunt dolore exercitationem qui
+            possimus, sunt rem animi eligendi! Laborum minus explicabo quae impedit accusamus distinctio natus veniam
+            laudantium, nobis praesentium tempora!</p>
+    </div>
+
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed suscipit modi ipsam exercitationem, ab porro
+            dolore sapiente repudiandae accusantium nesciunt maxime perspiciatis consequuntur excepturi libero
+            reprehenderit optio nihil nulla distinctio dicta! Vero animi officiis repudiandae inventore fugit asperiores
+            laborum aliquam ipsa. Ipsa eligendi porro veritatis fugit, sint unde. Cumque ipsa explicabo obcaecati, earum
+            nesciunt debitis quo omnis sunt porro odio quos fugit minima reprehenderit error hic distinctio perspiciatis
+            qui assumenda, deserunt laboriosam recusandae doloribus ab facilis odit. Ipsum aliquam commodi dolorem
+            distinctio sint adipisci sunt quo, unde consequuntur nam vel pariatur ratione officiis fugit expedita, illo
+            atque id excepturi soluta nostrum dignissimos. Eum, illo accusantium labore distinctio pariatur et quibusdam
+            blanditiis omnis minima, sit in est laborum qui unde asperiores exercitationem aliquam esse at quia magni
+            voluptatibus a! Mollitia quis amet ad facere architecto. Cum eum praesentium esse perspiciatis unde atque
+            iure aperiam fugiat ipsam voluptatum sit, nihil labore, cupiditate molestiae eaque architecto provident
+            nesciunt earum itaque consequuntur iste reiciendis est quam. Saepe vel temporibus dignissimos modi minus
+            quos enim maiores velit, debitis quae necessitatibus hic aliquam eos illum voluptatibus? Rerum natus
+            deserunt nobis dicta, facilis illum, similique et iste dolorem eligendi assumenda cum doloribus quae quia
+            illo provident, repellat nihil. Repellendus soluta nulla consequuntur, eaque, ipsam quaerat laborum et ab
+            architecto eveniet omnis iusto est saepe quod molestias natus consequatur facere vero commodi pariatur
+            voluptate. Illo unde inventore tenetur esse vero consequatur doloribus rerum suscipit commodi. Debitis sit
+            ipsum sapiente nesciunt maxime, magni ea aspernatur tenetur commodi explicabo eius facilis culpa nisi porro
+            perferendis obcaecati eligendi nulla earum corporis eos praesentium? Reprehenderit vel sapiente est atque
+            aperiam ducimus dolores distinctio. Ab ut sint consectetur odit amet repudiandae veniam vero ipsam maxime
+            officiis doloremque suscipit, magnam dolorem repellat fuga voluptas debitis nostrum facilis harum natus
+            dicta, voluptatum atque ducimus! Ipsam?</p>
+    </div>
+
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam iusto, hic porro neque mollitia distinctio
+            saepe sunt vel, quaerat cupiditate est nesciunt laboriosam natus cumque quasi repudiandae sit? Eos id
+            incidunt voluptatibus nostrum quod delectus doloribus sapiente, a at ad quibusdam rem necessitatibus illo
+            nam dignissimos explicabo laudantium exercitationem dolore ipsam eius sunt dicta dolores et? Illo animi,
+            blanditiis necessitatibus suscipit maxime temporibus, voluptatibus accusamus magnam saepe recusandae
+            praesentium ab eius quis qui assumenda dolor est eaque? Veritatis eius, neque, officiis rem ut cupiditate
+            alias reiciendis quasi, magni explicabo expedita. Neque architecto excepturi eum ut quibusdam qui nobis
+            dignissimos expedita aliquid? Dignissimos impedit, amet suscipit harum placeat maiores non at! Iusto
+            eveniet, cupiditate doloremque maxime quas voluptate est temporibus commodi at ipsa quo culpa similique
+            obcaecati reiciendis amet laboriosam autem assumenda rem sint facere iste fugiat sunt aliquid ut? Dolore
+            placeat quaerat dolor architecto. Enim in explicabo vero vitae, commodi at magni fuga, facere esse unde eius
+            provident recusandae debitis incidunt repudiandae corrupti id voluptatum quia! Soluta minus quod tempore
+            veritatis excepturi voluptas fuga asperiores natus harum quas numquam animi, aut impedit dolorem omnis
+            porro! Ipsum veritatis aut facere nihil tempora consequatur corrupti tempore vitae? Nostrum dolore ex
+            impedit, adipisci recusandae nam ad voluptas suscipit nulla. Veritatis sapiente doloremque, iste dicta optio
+            id ex illo similique cum ab earum libero, necessitatibus voluptatum vitae laboriosam quae beatae sed quaerat
+            incidunt facere. Vitae vel necessitatibus, quasi tenetur ut voluptatibus eius numquam, mollitia, beatae
+            cumque nemo. Provident quibusdam iure corrupti in, cumque veritatis omnis nostrum pariatur sint laudantium
+            atque id officia natus repellat temporibus a similique? Cum, fugit similique. Rerum corrupti, architecto
+            praesentium dolor accusantium beatae expedita dolorum in vero. Ducimus perferendis architecto molestiae hic
+            magnam tenetur eaque nesciunt nam exercitationem in. Tenetur dolorum provident ipsam magni consequuntur a
+            eos illum, qui culpa excepturi nobis esse minima, totam officiis? Debitis numquam esse beatae, nihil sit ad
+            non perspiciatis officiis odio eaque qui repellendus sed a provident laboriosam cum quo voluptatem sequi
+            quis. Assumenda, maxime officiis deserunt distinctio reprehenderit a omnis corrupti nesciunt itaque magnam,
+            eius facere laudantium pariatur obcaecati quas. Maiores, expedita suscipit sint eligendi ducimus distinctio
+            earum mollitia a modi eos cupiditate nemo vel alias consequuntur fuga facere tempora dolorem, soluta
+            blanditiis fugiat exercitationem explicabo iure adipisci. Eos saepe quidem officia in voluptas expedita,
+            dicta deleniti nostrum qui, facilis facere suscipit, praesentium molestias provident? Sit quisquam illum
+            dolores mollitia odit deleniti temporibus, accusamus sed totam nobis vero fugit nesciunt ipsam numquam
+            voluptas quaerat incidunt veniam iusto non sint commodi excepturi id velit. Beatae officiis modi tempora.
+            Rerum, eum illo! Ipsa, rerum temporibus.</p>
+    </div>
+
+    <script>
+        let accordion_buttons = document.querySelectorAll(".accordion");
+        for (let btn of accordion_buttons) {
+            btn.addEventListener("click", function () {
+                btn.classList.toggle("active");
+                let panel = this.nextElementSibling;
+                // animation
+                console.log(panel.style.maxHeight)
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    // đừng quên chữ px sau cùng, tốn 30 phút tìm lỗi :))
+                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

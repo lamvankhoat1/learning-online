@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How TO - Icon Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .vertical.icon-bar {
+            background-color: #555;
+            font-size: 36px;
+            display: flex;
+            flex-direction: column;
+            width: 98px;
+        }
+
+        .vertical.icon-bar a {
+            display: inline-block;
+            padding: 16px;
+            color: white;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .vertical.icon-bar a:hover {
+            background-color: #000;
+        }
+
+        .vertical.icon-bar a.active {
+            background-color: #04aa6d;
+            width: 100%;
+            overflow: auto;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .horizontal.icon-bar {
+            background-color: #555;
+            font-size: 36px;
+            /* display: flex;
+            flex-direction: row; */
+            /* justify-content: start; */
+            margin-top: 30px;
+        }
+        
+        .horizontal.icon-bar a {
+            /* display: inline-block; */
+            float: left;
+            width: 20%;
+            padding: 16px;
+            color: white;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .horizontal.icon-bar a:hover {
+            background-color: #000;
+        }
+
+        .horizontal.icon-bar a.active {
+            background-color: #04aa6d;
+        }
+    </style>
+    <!-- VERTICLE -->
+    <div class="vertical icon-bar">
+        <a href="#" class="active"><i class="fa-solid fa-house"></i></a>
+        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#"><i class="fa-regular fa-envelope"></i></a>
+        <a href="#"><i class="fa-solid fa-earth-americas"></i></a>
+        <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+    </div>
+    <!-- HORIZONTAL -->
+    <div class="horizontal icon-bar clearfix">
+        <a href="#" class="active"><i class="fa-solid fa-house"></i></a>
+        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#"><i class="fa-regular fa-envelope"></i></a>
+        <a href="#"><i class="fa-solid fa-earth-americas"></i></a>
+        <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+    </div>
+</body>
+</html>

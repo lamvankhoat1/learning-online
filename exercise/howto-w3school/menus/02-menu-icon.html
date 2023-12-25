@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02. Icon Bar</title>
+</head>
+<body>
+    <style>
+        .static-icon div {
+            width: 35px;
+            height: 5px;
+            margin: 6px 0;
+            background-color: black;
+        }
+
+        .animate-icon div {
+            width: 35px;
+            height: 5px;
+            margin: 6px 0;
+            background-color: black;
+            transition: all 0.4s;
+        }
+
+        .animate-icon.active div.bar-1 {
+            transform: translate(0, 11px) rotate(-45deg);
+        }
+
+        .animate-icon.active div.bar-2 {
+            /* visibility: hidden; */
+            opacity: 0;
+        }
+
+        .animate-icon.active div.bar-3 {
+            transform: translate(0, -11px) rotate(45deg);
+        }
+    </style>
+    <p>Static Icon</p>
+    <div class="container static-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <p>Animate Icon</p>
+    <div class="container animate-icon">
+        <div class="bar-1"></div>
+        <div class="bar-2"></div>
+        <div class="bar-3"></div>
+    </div>
+
+    <script>
+        let animateIcon = document.querySelector(".container.animate-icon");
+        animateIcon.addEventListener("click", function(){
+            this.classList.toggle("active")
+        })
+    </script>
+</body>
+</html>
