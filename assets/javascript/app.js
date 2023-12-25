@@ -47,8 +47,10 @@ function renderHTMT_function(h4_title, data_array) {
         } else {
             renderHTML_listUnit += ` <li class="list-group-item d-flex justify-content-between align-items-center">
 
-            <span class="d-flex align-items-center" onclick="openTab('${unit.url}')">${img} ${unit.name}</span>
-            <span class="badge badge-primary badge-pill" onclick="openTab('${unit.url}', true)">Full Width</span>
+            <span class="d-flex align-items-center" onclick="openTab('${unit.url}', true)">${img} ${unit.name}</span>
+            <span onclick="openTab('${unit.url}')">
+            <i class="fa fa-external-link" aria-hidden="true"></i>
+            </span>
             </li>`;
         }
 
