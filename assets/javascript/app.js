@@ -1,6 +1,6 @@
 let list_unit_fullstack = [
     {url: "https://hocwebchuan.com/", name: "Học Web Chuẩn"},
-    { url: "https://unitop.vn/my-course", name: "Khóa học UNITOP" },
+    { url: "https://unitop.vn/my-course", name: "Khóa học UNITOP", img: "https://unitop.vn/public/images/favicon.ico"},
 ]
 
 let list_unit_jquery = [
@@ -20,6 +20,7 @@ let list_unit_markdown = [
 
 let list_unit_app = [
     { url: 'webrun:C:/Users/lamva/AppData/Local/Programs/Anki/anki.exe', name: 'ANKI' },
+    { url: 'https://www.duolingo.com/', name: 'Duolingo', img: "https://d35aaqx5ub95lt.cloudfront.net/favicon.ico"},
     { url: 'https://snippet-generator.app/', name: 'snippet-generator' },
 ]
 
@@ -33,6 +34,7 @@ function renderHTMT_function(h4_title, data_array) {
     let renderHTML_listUnit = ""
     for (let unit of data_array) {
         let icon_angleDoubleRight = `<i class="fa fa-angle-double-right" aria-hidden="true"></i>`
+        let img = unit.img ? `<img src='${unit.img}' style="width: 16px; height: 16px; margin-right: 16px"> ` : "";
 
         if (unit.url.toString().includes("webrun:")) {
             renderHTML_listUnit += ` <li class="list-group-item">
@@ -40,7 +42,8 @@ function renderHTMT_function(h4_title, data_array) {
             </li>`;
         } else {
             renderHTML_listUnit += ` <li class="list-group-item d-flex justify-content-between align-items-center">
-            <span onclick="openTab('${unit.url}')">${unit.name}</span>
+
+            <span class="d-flex align-items-center" onclick="openTab('${unit.url}')">${img} ${unit.name}</span>
             <span class="badge badge-primary badge-pill" onclick="openTab('${unit.url}', true)">Full Width</span>
             </li>`;
         }
