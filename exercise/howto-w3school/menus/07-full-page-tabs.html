@@ -10,30 +10,39 @@
 <style>
     * {
         box-sizing: border-box;
+        margin: 0;
+        /* html cũng có cả margin */
     }
+
+    html {
+        height: 100%;
+    }
+
     body {
         padding: 0;
-        margin: 0 !important;
-        height: 100%;
+        height: inherit;
+    }
+
+    .tabcontent {
+        height: inherit;
+        padding: 100px 20px;
     }
 
     button.tablink {
         float: left;
         width: 25%;
+        padding: 14px 16px;
+        background-color: #555;
+        color: white;
         border: none;
         outline: none;
-        background-color: #555;
-        padding: 14px 16px;
-        color: white;
     }
 
     button.tablink:hover {
         background-color: #777;
     }
 
-    .tabcontent {
-        height: 100%;
-    }
+    
 </style>
 
 <body>
@@ -61,6 +70,28 @@
         <h3>About</h3>
         <p>Who we are and what we do.</p>
     </div>
+
+    <script>
+        function hide(selector) {
+            document.querySelectorAll(selector).forEach(function (element) {
+                element.style.display = "none";
+            })
+        }
+
+        // autoclick when start
+        document.querySelector(".tablink").click();
+        function openPage(id, element, color) {
+            hide(".tabcontent");
+            // gán màu cho button
+            element.style.backgroundColor = color;
+            // hiện id
+            let id_show = document.getElementById(id);
+            id_show.style.display = "block";
+            // tô màu cho id
+            id_show.style.backgroundColor = color;
+
+        }
+    </script>
 </body>
 
 </html>

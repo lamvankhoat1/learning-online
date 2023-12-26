@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    p, h2 {
+        margin-bottom: 10px;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .left {
+        flex: 25%;
+        padding: 10px 0;
+    }
+
+    .right {
+        flex: 75%;
+        padding: 20px 10px;
+    }
+
+    ul#myMenu {
+        list-style: none;
+    }
+
+    ul#myMenu li a {
+        padding: 10px;
+        display: block;
+        text-decoration: none;
+        color: black;
+    }
+
+    ul#myMenu li:hover a {
+        background-color: #ddd;
+    }
+
+    input#mySearch {
+        width: 100%;
+        padding: 10px;
+        font-size: 17px;
+        outline: none;
+    }
+</style>
+
+<body>
+    <div class="row">
+        <div class="left" style="background-color:#bbb;">
+            <h2>Menu</h2>
+            <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+            <ul id="myMenu">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">jQuery</a></li>
+                <li><a href="#">SQL</a></li>
+                <li><a href="#">Bootstrap</a></li>
+                <li><a href="#">Node.js</a></li>
+            </ul>
+        </div>
+
+        <div class="right" style="background-color:#ddd;">
+            <h2>Page Content</h2>
+            <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+            <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+            <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+            <p>Some text..</p>
+        </div>
+
+        <script>
+            function myFunction() {
+                let type_value = document.querySelector("#mySearch").value.toString().toUpperCase().trim();
+                let myMenu_li = document.querySelectorAll("#myMenu li");
+
+                myMenu_li.forEach(function(li) {
+                    let innerText = li.innerText.toUpperCase();
+                    if(innerText.indexOf(type_value) == -1) {
+                       li.style.display = "none"
+                    } else {
+                        li.style.display = ""
+                    }
+                }) 
+            }
+        </script>
+    </div>
+</body>
+
+</html>

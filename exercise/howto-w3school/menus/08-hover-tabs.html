@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Tabs</title>
+</head>
+
+<body>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            height: 100%;
+        }
+
+        .tab {
+            background-color: #f1f1f1;
+            float: left;
+            height: 100%;
+            width: 30%;
+        }
+
+        .tab .tablinks {
+            padding: 17px 10px;
+            cursor: pointer;
+        }
+
+        .tab .tablinks.active {
+            background-color: #ccc;
+        }
+
+        .tabcontent {
+            float: left;
+            width: 70%;
+            height: 100%;
+            padding: 10px 40px;
+            display: none;
+        }
+    </style>
+    <div class="tab">
+        <div class="tablinks" onmouseover="openCity(event, 'London')">London</div>
+        <div class="tablinks" onmouseover="openCity(event, 'Paris')">Paris</div>
+        <div class="tablinks" onmouseover="openCity(event, 'Tokyo')">Tokyo</div>
+    </div>
+
+    <div id="London" class="tabcontent">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
+    </div>
+
+    <div id="Paris" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p>
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <script>
+        document.querySelector(".tablinks").click();
+        function openCity(event, id) {
+            // hide tabcontent
+            document.querySelectorAll(".tabcontent").forEach(function(tabcontent) {
+                tabcontent.style.display = "none";
+            })
+            document.querySelectorAll(".tablinks").forEach(function(tablinks) {
+                tablinks.classList.remove("active")
+            })
+            document.getElementById(id).style.display = "block";
+            event.target.classList.add("active");
+        }
+    </script>
+</body>
+
+</html>
