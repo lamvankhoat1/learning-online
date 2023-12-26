@@ -22,7 +22,7 @@ let list_unit_markdown = [
 
 let list_unit_app = [
     { url: 'webrun:C:/Users/lamva/AppData/Local/Programs/Anki/anki.exe', name: 'ANKI', img: "https://apps.ankiweb.net/favicon.ico"},
-    { url: 'webrun:\Users\lamva\AppData\Local\Programs\Microsoft VS Code\Code.exe', name: 'VS Code', img: "https://code.visualstudio.com/favicon.ico"},
+    { url: 'webrun:C:/Users/lamva/AppData/Local/Programs/Microsoft VS Code/Code.exe', name: 'VS Code', img: "https://code.visualstudio.com/favicon.ico"},
     { url: 'https://www.duolingo.com/', name: 'Duolingo', img: "https://d35aaqx5ub95lt.cloudfront.net/favicon.ico" },
     { url: 'https://snippet-generator.app/', name: 'snippet-generator', img: "https://snippet-generator.app/favicon-32x32.png"},
 ]
