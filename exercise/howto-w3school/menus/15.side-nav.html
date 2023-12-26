@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side navigation</title>
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        span.nav-btn {
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #mySidenav {
+            background-color: #111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            /* Lỗi khi code: Phải thêm overflow: hidden thì mới áp dụng chuyển đổi width được */
+            /* nếu không thêm, các thẻ a sẽ trồi ra ngoài, không tạo được hiệu ứng */
+            overflow: hidden;
+            width: 0;
+            transition: all 0.5s;
+            padding-top: 60px;
+
+
+        }
+
+        #mySidenav a {
+            color: #818181;
+            font-size: 25px;
+            display: block;
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            transition: all 0.5s;
+        }
+
+        #mySidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        a.close-nav {
+            position: absolute;
+            right: 25px;
+            top: 0px;
+            font-size: 36px !important;
+            margin-left: 25px;
+        }
+    </style>
+    <span class="nav-btn" onclick="closeNav">&#9776; Open Animated Side Navigation</span>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" onclick="closeNav()" class="close-nav">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <script>
+        document.querySelector("span.nav-btn").addEventListener("click", openNav)
+        let mySidenav = document.getElementById("mySidenav");
+        function openNav() {
+            mySidenav.style.width = "250px"
+        }
+
+        function closeNav() {
+            mySidenav.style.width = "0"
+        }
+    </script>
+</body>
+
+</html>
