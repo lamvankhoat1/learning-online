@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        * {
+          border: 1px solid transparent;
+        }
+        #myNavbar {
+            background-color: #2d2d2d;
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        #myNavbar a {
+            float: left;
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 16px;
+            font-size: 17px;
+            position: relative;
+        }
+
+        #myNavbar a:not(.active) {
+            display: block;
+        }
+
+        #myNavbar a.active {
+            background-color: #007c30;
+        }
+
+        #myNavbar a.icon {
+            display: none;
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 400px) {
+            #myNavbar a.icon {
+                display: inline-block !important;
+                position: absolute;
+                right: 0px;
+                bottom: 0;
+            }
+
+            #myNavbar a:not(.active) {
+                display: none;
+            }
+
+            #myNavbar.responsive a {
+                display: block !important;
+                float: none;
+            }
+
+            /* #myNavbar.responsive */
+        }
+    </style>
+    <div class="navbar" id="myNavbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+
+      <script>
+        function myFunction() {
+            let myNavbar = document.querySelector("#myNavbar");
+            myNavbar.classList.toggle("responsive")
+        }
+      </script>
+</body>
+</html>

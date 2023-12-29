@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Right Aligned Menu Buttons</title>
+</head>
+
+<body>
+    <style>
+        .topnav {
+            background-color: #393939;
+            overflow: hidden;
+        }
+
+        .topnav a {
+            float: left;
+            text-decoration: none;
+            padding: 17px;
+            color: white;
+            transition: all 0.1s;
+        }
+
+        .topnav a:hover:not(.active) {
+            background-color: #cdcdcd;
+            color: black;
+        }
+
+        a.active {
+            background-color: #04AA6D;
+        }
+
+        .topnav-right {
+            float: right;
+        }
+    </style>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <div class="topnav-right">
+            <a href="#search">Search</a>
+            <a href="#about">About</a>
+        </div>
+    </div>
+</body>
+
+</html>

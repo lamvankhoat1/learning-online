@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoverable Sidenav</title>
+</head>
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #mySidenav {
+            position: fixed;
+            top: 40px;
+            left: 0;
+            max-width: 300px;
+            overflow: hidden;
+        }
+
+        #mySidenav a {
+            display: block;
+            margin-top: 15px;
+            font-size: 20px;
+            color: white;
+            padding: 10px 5px;
+            border-radius: 0 5px 5px 0;
+            text-decoration: none;
+            transition: all 0.5s ease-in-out;
+            /* change */
+            width: 30%;
+            color: transparent;
+        }
+
+        #mySidenav a:hover {
+            width: 100%;
+            color: white;            
+        }
+
+        #about {
+            background-color: #04AA6D; 
+        }
+
+        #blog {
+            background-color: #2196F3;
+        }
+
+        #projects {
+            background-color: #f44336;
+        }
+
+        #contact {
+            background-color: #555;
+        }
+
+        #content {
+            margin-left: 100px;
+        }
+    </style>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="#" id="about">About</a>
+        <a href="#" id="blog">Blog</a>
+        <a href="#" id="projects">Projects</a>
+        <a href="#" id="contact">Contact</a>
+    </div>
+
+    <div id="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, provident maiores enim pariatur placeat distinctio. Facere temporibus nobis optio quas eveniet omnis ad, assumenda deserunt non delectus ut consequuntur? Dolor ipsam possimus ipsum placeat ducimus qui consequuntur nulla recusandae vero in laborum, fugiat delectus perspiciatis atque repudiandae a ullam soluta quam alias tenetur nisi? Reiciendis, alias molestiae ipsam voluptas qui et sit quod atque possimus odio nam fugit praesentium provident eius, recusandae fuga. A, dolor dicta culpa debitis ea eligendi deserunt reiciendis quas repudiandae placeat quia illo esse perferendis deleniti doloremque repellat eaque! Aliquam non tempora quisquam, repudiandae dicta quia nihil rem nemo ducimus libero distinctio at necessitatibus corrupti repellat cum aperiam voluptates saepe minima corporis sequi temporibus nesciunt culpa vero modi. A at ipsam libero? Accusamus dolores, quisquam tempore commodi inventore itaque minima libero voluptatibus explicabo a voluptas autem nihil magnam harum deserunt! Officiis consequuntur, esse, vitae ullam ex exercitationem assumenda eum consectetur tempore vero numquam adipisci. Aspernatur inventore amet asperiores, vitae quo nihil vero blanditiis quia dignissimos illo similique expedita deserunt rerum dolorum a incidunt omnis nisi in ullam tempore quasi. Quidem temporibus, perferendis illum deleniti qui voluptas velit totam molestiae nisi suscipit atque aut deserunt voluptatum assumenda ipsa nulla nostrum? Dolorum dolore dicta architecto suscipit adipisci id. Soluta, dignissimos officiis! Consequuntur nemo iusto a. Iure, ad atque deleniti mollitia totam nam accusamus illo praesentium provident pariatur earum eveniet consectetur ab architecto fugiat eos aut, exercitationem repellat ipsa. Quae sunt eaque minima optio neque consequuntur autem expedita adipisci quod aut excepturi molestiae distinctio blanditiis fugiat dolorem magni possimus repellendus error quam repellat, ducimus harum non? Earum eaque dolorem delectus porro maiores, velit dolor aut debitis aliquam praesentium ex, placeat cum? Alias recusandae officia facilis nostrum vero quos laborum magnam. Corporis, optio iure id voluptatibus tempore eum saepe veritatis!</p>
+    </div>
+</body>
+</html>

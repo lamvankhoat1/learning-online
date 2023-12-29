@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen Nav</title>
+</head>
+
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.9);
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            width: 0;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .overlay-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .overlay-content a, .closebtn{
+            color: #818181;
+            text-align: center;
+            display: block;
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .closebtn {
+            position: absolute;
+            right: 20px;
+            top: 10px
+        }
+
+        .overlay-content a:hover, .closebtn:hover {
+            color: white;
+        }
+
+        #main {
+            font-size: 20px;
+            padding: 10px 10px 10px 20px;
+            text-align: justify;
+        }
+
+        button.bar {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            margin: 0;
+            font-size: 20px;
+        }
+
+
+
+    </style>
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+
+    </div>
+
+    <!-- Use any element to open/show the overlay navigation menu -->
+    <div id="main">
+        <button onclick="openNav()" class="bar">&#9776;</button>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque totam tempore debitis facere obcaecati illo corrupti aspernatur atque voluptates enim, ipsum temporibus inventore corporis suscipit aliquam nesciunt nemo placeat voluptatem molestiae. Nostrum eaque maxime cum magnam doloribus eum perferendis officiis sint soluta culpa obcaecati amet excepturi facere eligendi vel impedit ea, quo nesciunt. Aliquid natus exercitationem voluptates labore laudantium blanditiis debitis eaque! Mollitia eaque velit, aliquid veniam sunt hic maiores iure! Doloribus sequi minus corrupti temporibus reprehenderit. Unde, itaque neque!</p>
+        <p>Perferendis deserunt quia, quisquam harum asperiores architecto a quam, soluta tempora incidunt commodi sequi ex neque repellendus nobis odit porro vitae cupiditate? Rem itaque a impedit eaque dolorem sapiente nam inventore totam repellendus ut asperiores nulla, dolores incidunt animi ipsum assumenda perferendis excepturi rerum dolorum. Molestias eveniet ducimus commodi amet quaerat soluta, laboriosam quas deleniti iusto neque. Non a eum esse, blanditiis vitae nobis recusandae id error consectetur amet mollitia repellat deleniti reprehenderit eveniet dolore dignissimos facilis ullam nihil quam.</p>
+        <p>Accusantium debitis vero pariatur libero voluptatem dolore accusamus deserunt neque et incidunt harum ullam ipsum obcaecati, magni possimus recusandae. Alias quisquam voluptas id nam et facilis doloremque repudiandae corrupti in hic veniam officiis veritatis ipsum dolor aut consectetur fugit sint, impedit nostrum cum inventore. Qui asperiores accusantium reprehenderit reiciendis cum culpa illo commodi alias, perspiciatis mollitia, enim iure ut. Suscipit saepe minus repudiandae tempore asperiores atque placeat, debitis quasi reiciendis nesciunt quia veniam in tempora nisi nemo voluptatem, assumenda reprehenderit.</p>
+        <p>Perspiciatis iure aliquid fugiat, magni accusantium odio, nihil possimus voluptatem laboriosam adipisci corporis eius rem expedita vero velit ea quaerat maxime excepturi quas cupiditate modi repudiandae? Doloribus suscipit aperiam doloremque maiores rem deleniti provident ducimus numquam ex, asperiores tempora placeat ad fuga sint voluptatum eius excepturi laboriosam illum velit fugiat perspiciatis laudantium recusandae debitis deserunt. Dolore saepe neque, assumenda rem in fuga quas eum, sit vero quos veniam cum earum nobis. Culpa atque dolores nulla fuga id dolore repudiandae eius?</p>
+        <p>Vero asperiores officia a repellendus repellat quis minus, doloremque quod eos maxime? Eius amet molestias rem saepe minus harum, vero quam, quisquam illum neque nam excepturi atque! Incidunt corrupti, odio voluptatibus, porro reiciendis non, eligendi eveniet cumque magnam consequatur quasi distinctio. Corrupti necessitatibus perspiciatis, eos hic tempora ab sapiente quia, quod quaerat pariatur quis provident omnis laborum. Unde recusandae praesentium laudantium atque nostrum delectus, in optio numquam architecto doloremque illo qui quibusdam. Maxime libero quas facere commodi atque sunt unde!</p>
+    </div>
+
+    <script>
+        let overlay = document.querySelector(".overlay")
+        function openNav() {
+            overlay.style.width = "100%";
+        }
+
+        function closeNav() {
+            overlay.style.width = 0
+        }
+    </script>
+</body>
+
+</html>

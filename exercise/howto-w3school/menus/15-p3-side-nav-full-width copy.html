@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side navigation</title>
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        span.nav-btn {
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #mySidenav {
+            background-color: #111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            /* Lỗi khi code: Phải thêm overflow: hidden thì mới áp dụng chuyển đổi width được */
+            /* nếu không thêm, các thẻ a sẽ trồi ra ngoài, không tạo được hiệu ứng */
+            overflow: hidden;
+            width: 0;
+            transition: all 0.5s;
+            padding-top: 60px;
+
+
+        }
+
+        #mySidenav a {
+            text-align: center;
+            color: #818181;
+            font-size: 25px;
+            display: block;
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            transition: all 0.5s;
+        }
+
+        #mySidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        a.close-nav {
+            position: absolute;
+            right: 25px;
+            top: 0px;
+            font-size: 36px !important;
+            margin-left: 25px;
+        }
+
+        body {
+            transition: background-color 0.5s;
+        }
+
+        #main {
+            transition: margin-left 0.5s;
+        }
+    </style>
+    <span class="nav-btn" onclick="closeNav">&#9776; Sidebar</span>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" onclick="closeNav()" class="close-nav">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <div id="main">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptatum a neque obcaecati molestias maxime magnam minus? Iure aut delectus omnis ex distinctio at tempore. Et velit aperiam illo nihil quibusdam quia, eveniet suscipit.</p>
+        <p>Possimus vero, consectetur deserunt a, voluptatum earum exercitationem delectus, harum velit dicta non blanditiis architecto accusantium beatae culpa iste? Possimus at provident magnam ad ipsum voluptates nihil quis explicabo sapiente ullam! Unde, vel inventore.</p>
+        <p>Nihil alias, cumque non dolorum optio nesciunt. Odit ratione deleniti mollitia illo quaerat ullam. Accusantium voluptatem eos totam illo officiis deserunt sed, vero impedit non vel ipsa modi, quaerat praesentium similique voluptates error doloribus.</p>
+        <p>Veniam corporis eaque nisi quo culpa, rem explicabo vel? Doloribus cumque in eaque totam laudantium similique sequi distinctio optio quos ab, nemo at dolore ratione aliquam? Eos ipsa, veritatis ex temporibus repudiandae et magnam?</p>
+        <p>Debitis, suscipit ea aliquam eaque blanditiis possimus accusantium, veniam adipisci ipsa asperiores earum corporis! Repellendus ratione voluptates ipsam provident molestias nulla nisi culpa voluptate beatae? Nulla blanditiis asperiores itaque quibusdam totam, non voluptatem quisquam.</p>
+    </div>
+
+    <script>
+        document.querySelector("span.nav-btn").addEventListener("click", openNav)
+        let mySidenav = document.getElementById("mySidenav");
+        let main = document.getElementById("main");
+        function openNav() {
+            mySidenav.style.width = "100%";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)"           
+        }
+        
+        function closeNav() {
+            mySidenav.style.width = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+</body>
+
+</html>
